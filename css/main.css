@@ -70,6 +70,7 @@ p {
 
 header {
 	margin: 0 auto;
+	width: 100%;
 }
 
 header h1 {
@@ -148,7 +149,6 @@ header nav ul li a{
 	align-items: flex-start;
 }
 
-
 .section-one,
 .section-two,
 .section-three {
@@ -180,10 +180,9 @@ header nav ul li a{
 /*** Footer ***/
 
 footer {
-	height: 3.125em; /* originally 'height: 50px;' Trying em's for height to see if it flows better in a responsive format */
+	height: 3.125em;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	/* clear: both; */
 	text-align: center;
 }
 
