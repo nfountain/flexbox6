@@ -6,13 +6,12 @@
 }
 
 html {
-	/* allows for rem if you set the font size at the root level/html level (instead of body level). */
 	font-size: 16px;
 }
 
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	font-size: 1em; /* this chains the em font-size, making it still obvious to humans that it is 16px. */
+	font-size: 1em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,6 +19,7 @@ body {
 
 .container {
 	max-width: 1200px;
+	width: 90%;
 	font-size: 1em;
 	margin: 0 auto;
 	display: flex;
@@ -36,7 +36,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/*flex-flow: row wrap;*/
+	flex-flow: row wrap;
 }
 
 /*
@@ -78,41 +78,37 @@ p {
 }
 
 
-/*** Full screen styling ***/
-
 /*** Header ***/
 
 header {
-	height: 6.875em; /* originally 'height: 110px;' I'm trying em's to see if the height will then flow with the text size when the screen size is changed. */
-	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
 }
 
 header h1 {
-	float: left;
 	margin: 0;
-	padding: 2.375em 0;
+	padding: 1em 0 0.5em 0;
+	border-bottom: 2px solid #77a466;
 }
+
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	float: right;
-	padding: 2.875em 0;
+	padding: 0;
 }
 
 header nav ul {
+	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 1em;
 }
 
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
-	padding: 0 0.625em;
-	display: inline;
+	padding: 1em;
 }
 
 header nav ul li a{
@@ -132,17 +128,18 @@ header nav ul li a{
 
 .main-image {
 	height: auto;
-	float: left;
+	/* float: left; */
 }
 
 .main-image img {
 	width: 100%;
+	border-top: 3px solid #77a466;
 	border-bottom: 3px solid #77a466;
 }
 
 .main-title {
 	height: auto;
-	float: left;
+	/* float: left; */
 }
 
 .main-title h3 {
@@ -164,7 +161,7 @@ header nav ul li a{
 .section-three {
 	width: 33%;
 	height: auto;
-	float: left;
+	/* float: left; */
 	border-top: 1px solid #eee;
 }
 
@@ -209,7 +206,7 @@ footer {
 	height: 3.125em; /* originally 'height: 50px;' Trying em's for height to see if it flows better in a responsive format */
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	clear: both;
+	/* clear: both; */
 	text-align: center;
 }
 
@@ -222,3 +219,24 @@ footer span {
 
 /*** Media Queries for larger screens ***/
 
+@media all and (min-width: 768px) {
+	.bottom-section {
+
+	}
+	.section-one {
+
+	}
+	.section-two {
+
+	}
+	.section-three {
+
+	}
+}
+
+@media all and (min-width: 1200px) {
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+}
