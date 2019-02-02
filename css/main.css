@@ -164,23 +164,8 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	/* width: 33%; */
 	height: auto;
 	border-top: 1px solid #eee;
-}
-
-.section-one h4 {
-	/* padding: 0.625em 0; */
-}
-
-/* .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-} */
-
-.section-two h4,
-.section-three h4 {
-	/* padding: 0.625em 1.875em; */
 }
 
 .menu {
@@ -225,16 +210,17 @@ footer span {
 
 @media all and (min-width: 768px) {
 	.bottom-section {
-
+		flex-flow: row nowrap;	
 	}
-	.section-one {
-
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+		padding: 0 1em;
 	}
 	.section-two {
-
-	}
-	.section-three {
-
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
 	}
 }
 
